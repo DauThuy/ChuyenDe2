@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>Quản lý sinh viên</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+
+<body onload="renderListStudent()">
+
+	<div class = "form-student">
+		
+		<h3>Thông tin sinh viên</h3>
+		<label>MSSV</label>
+		<input type="text" id="mssv" />
+		<span id="mssv-error" class="error"></span>
+		<br/>
+
+
+		<label>Họ tên</label>
+		<input type="text" id="fullname" />
+		<span id="fullname-error" class="error"></span>
+		<br/>
+
+		<label>Email</label>
+		<input type="text" id="email" />
+		<span id="email-error" class="error"></span>
+		<br/>
+
+
+		<label>&nbsp</label>
+		<button id='addStudent' onclick="addStudent()">Thêm</button>
+
+		<button id='editStudent' onclick="edit()">edit</button>
+		<br/>
+	</div>
+
+	<div class="list-student" id="list-student">
+		<h3>Danh sách sinh viên</h3>
+		<table id="grid-students" width = "650" border="1" cellpadding="0" cellpadding="0">
+			
+		</table>
+	</div>
+
+	<script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)
+'></script>
+
+	<script src="./js/student.js"></script>
+</body>
+</html>
